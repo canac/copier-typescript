@@ -1,0 +1,10 @@
+author_name: Author's name
+author_github: Author's GitHub handle
+project_name: Project name
+project_description: Project description
+
+_tasks:
+  - 'git init'
+  - 'npm install'
+
+_subdirectory: template
