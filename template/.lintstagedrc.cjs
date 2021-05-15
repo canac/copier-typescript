@@ -1,8 +1,10 @@
 'use strict';
 
+function eslint(files) {
+  return `eslint --cache ${files.join(' ')}`;
+}
+
 module.exports = {
-  'src/**/*.ts': (files) => [
-    'tsc --noEmit',
-    `eslint --cache ${files.join(' ')}`,
-  ],
+  './*.cjs': (files) => eslint(files),
+  'src/**/*.ts': (files) => ['tsc --noEmit', eslint(files)],
 };
